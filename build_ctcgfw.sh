@@ -18,7 +18,7 @@ src-link telephony ${SCRIPT_ABS_PATH}/feeds/openwrt/telephony
 # basic configuration whatever build SDK, build packages or develepment
 function base_pack_conf {
 BASE_PACK_CONF="
-$(TARGET_X86_64)
+$(TARGET_bcm27xx_bcm2709)
 
 $(GENERAL_SETTING)
 
@@ -52,6 +52,9 @@ CONFIG_PACKAGE_autosamba=n
 CONFIG_PACKAGE_luci-app-music-remote-center=n
 CONFIG_PACKAGE_kmod-tcp-bbr=m
 CONFIG_PACKAGE_luci-app-flowoffload=n
+CONFIG_PACKAGE_luci-app-amule=n
+CONFIG_PACKAGE_luci-app-qbittorrent=n
+CONFIG_PACKAGE_luci-app-openvpn-server=n
 
 "
 }
